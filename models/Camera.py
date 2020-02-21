@@ -3,10 +3,12 @@ from flask import Flask
 from stores.postgress import db
 
 class Camera(db.Model):
+  __tablename__ = 'cameras'
   id = db.Column(db.Integer, primary_key=True)
   name = db.Column(db.String(80), unique=True, nullable=False)
   rtsp = db.Column(db.String(500), nullable=False)
   is_active = db.Column(db.Boolean(), unique=False, default=True)
+  plates = db.relationship("DetectedPlate")
 
   def __init__(self, name, rtsp):
     self.name = name

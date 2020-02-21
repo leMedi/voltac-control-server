@@ -5,12 +5,18 @@ verify_ssl = true
 
 [dev-packages]
 pylint = "*"
+autopep8 = "*"
 
 [packages]
 flask = "*"
 python-dotenv = "*"
 termcolor = "*"
 flask-sqlalchemy = "*"
+openalpr = "*"
+numpy = "*"
+opencv-python = "*"
+psycopg2 = "*"
+flask-cors = "*"
 
 [requires]
 python_version = "3.7"
